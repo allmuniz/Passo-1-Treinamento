@@ -1,14 +1,6 @@
-package caelum.fj93;
+package caelum.fj93.modelo;
 
-public class Cpf implements Documento {
-    private final String valor;
-
-    public Cpf(String valor) {
-        this.valor = valor;
-    }
-    public String getValor() {
-        return valor;
-    }
+public record Cpf(String valor) implements Documento {
 
     @Override
     public String toString() {
@@ -24,26 +16,23 @@ public class Cpf implements Documento {
         return this.valor.equals(outro.valor);
     }
 
-    @Override
-    public int hashCode() {
-        return this.valor.hashCode();
-    }
-
     public boolean ehValido() {
-        return  primeiroDigitoVerificador() == primeiroDigitoCorreto() && segundoDigitoVerificador()
+        return primeiroDigitoVerificador() == primeiroDigitoCorreto() && segundoDigitoVerificador()
                 == segundoDigitoCorreto();
     }
 
     private int primeiroDigitoVerificador() {
         return 1;
     }
-    private int primeiroDigitoCorreto(){
+
+    private int primeiroDigitoCorreto() {
         return 1;
     }
 
     private int segundoDigitoVerificador() {
         return 2;
     }
+
     private int segundoDigitoCorreto() {
         return 2;
     }

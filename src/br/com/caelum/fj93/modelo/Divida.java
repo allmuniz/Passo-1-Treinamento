@@ -1,11 +1,10 @@
-package caelum.fj93;
+package caelum.fj93.modelo;
 
 public class Divida {
 
     private double total;
     private String credor;
     private Documento documentoCredor;
-    private Pagamentos pagamentos = new Pagamentos();
 
     public Documento getDocumentoCredor() {
         return documentoCredor;
@@ -15,15 +14,17 @@ public class Divida {
         this.documentoCredor = documentoCredor;
     }
 
-    public Pagamentos getPagamentos() {
-        return pagamentos;
-    }
-
     public void setTotal(double total) {
         this.total = total;
+    }
+    public double getTotal() {
+        return total;
     }
 
     public void setCredor(String credor) {
         this.credor = credor;
+    }
+    public String getCredor() {
+        return credor;
     }
 }

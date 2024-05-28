@@ -1,4 +1,4 @@
-package caelum.fj93;
+package caelum.fj93.modelo;
 
 import java.util.Date;
 

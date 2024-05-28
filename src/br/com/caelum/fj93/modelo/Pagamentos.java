@@ -1,4 +1,4 @@
-package caelum.fj93;
+package caelum.fj93.modelo;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -8,16 +8,13 @@ public class Pagamentos extends ArrayList<Pagamento> {
 
     private double valorPago;
 
-    public double getValorPago() {
-        return valorPago;
-    }
-
     private void paga(double valor) {
         if (valor < 0){
             throw new IllegalArgumentException("Valor invalido");
         }
         if (valor > 100) {
             valor = valor - 8;
+
         }
         this.valorPago += valor;
     }

@@ -1,8 +1,10 @@
-package caelum.fj93;
+package caelum.fj93.programa;
+
+import caelum.fj93.modelo.*;
 
 public class MinhaAplicacao {
     public static void main(String[] args) {
-        BancoDeDados bd = new BancoDeDados("localhost", "usuario", "1234");
+        BancoDeDados bd = new BancoDeDados();
         BalancoEmpresa balanco = new BalancoEmpresa(bd);
         registraDividas(balanco);
         realizaPagamentos(balanco);
@@ -18,7 +20,7 @@ public class MinhaAplicacao {
         divida1.setTotal(1000);
 
         divida2.setCredor("Meu vizinho");
-        divida2.setDocumentoCredor(new Cnpj("00.000.001/0001-01"));
+        divida2.setDocumentoCredor(new Cnpj("00.000.002/0001-02"));
         divida2.setTotal(100);
 
         balanco.registraDividas(divida1);
@@ -29,7 +31,7 @@ public class MinhaAplicacao {
         Pagamento pagamento1 = new Pagamento();
         Pagamento pagamento2 = new Pagamento();
 
-        pagamento1.setDocumentoCredor(new Cnpj("00.000.002/0001-02"));
+        pagamento1.setDocumentoCredor(new Cnpj("00.000.001/0001-01"));
         pagamento1.setPagador("Uma empresa legal");
         pagamento1.setValor(500);
 

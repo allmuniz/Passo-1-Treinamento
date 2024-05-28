@@ -1,4 +1,4 @@
-package caelum.fj93;
+package caelum.fj93.modelo;
 
 public class ArrayList implements Colecao {
     public boolean add(Object element) {

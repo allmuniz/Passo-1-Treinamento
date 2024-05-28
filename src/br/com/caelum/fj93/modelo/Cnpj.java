@@ -1,12 +1,6 @@
-package caelum.fj93;
+package caelum.fj93.modelo;
 
-public class Cnpj implements Documento {
-
-    private final String valor;
-
-    public Cnpj(String valor) {
-        this.valor = valor;
-    }
+public record Cnpj(String valor) implements Documento {
 
     @Override
     public boolean equals(Object o) {
@@ -16,31 +10,28 @@ public class Cnpj implements Documento {
         return this.valor.equals(outro.valor);
     }
 
-    @Override
-    public int hashCode() {
-        return this.valor.hashCode();
-    }
-
     public boolean ehValido() {
-        return  primeiroDigitoVerificador() == primeiroDigitoCorreto() && segundoDigitoVerificador()
+        return primeiroDigitoVerificador() == primeiroDigitoCorreto() && segundoDigitoVerificador()
                 == segundoDigitoCorreto();
     }
 
     @Override
-    public String getValor() {
+    public String valor() {
         return "";
     }
 
     private int primeiroDigitoVerificador() {
         return 1;
     }
-    private int primeiroDigitoCorreto(){
+
+    private int primeiroDigitoCorreto() {
         return 1;
     }
 
     private int segundoDigitoVerificador() {
         return 2;
     }
+
     private int segundoDigitoCorreto() {
         return 2;
     }

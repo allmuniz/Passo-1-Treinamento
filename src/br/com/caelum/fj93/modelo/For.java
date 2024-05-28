@@ -1,4 +1,4 @@
-package caelum.fj93;
+package caelum.fj93.modelo;
 
 public class For {
     public void percarreColecao(Colecao colecao) {
