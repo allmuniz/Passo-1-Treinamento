@@ -1,0 +1,3 @@
+Estou lendo do arquivo,
+pode ter varias linhas!
+Metodo InputStream.

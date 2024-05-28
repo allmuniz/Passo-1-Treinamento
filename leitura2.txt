@@ -1,0 +1,3 @@
+Estou lendo do outro arquivo,
+pode ter varias linhas!
+Metodo Scanner.
